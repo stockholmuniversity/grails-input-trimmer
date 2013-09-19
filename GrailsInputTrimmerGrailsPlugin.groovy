@@ -1,3 +1,6 @@
+import org.codehaus.groovy.grails.plugins.web.filters.FiltersConfigArtefactHandler
+import se.su.it.grails.plugins.trimmer.InputTrimmingFilter
+
 class GrailsInputTrimmerGrailsPlugin {
     // the plugin version
     def version = "0.1"
@@ -8,18 +11,27 @@ class GrailsInputTrimmerGrailsPlugin {
         "grails-app/views/error.gsp"
     ]
 
+    def loadBefore = ['filters']
+
     // TODO Fill in these fields
     def title = "Grails Input Trimmer Plugin" // Headline display name of the plugin
-    def author = "Your name"
-    def authorEmail = ""
+    def author = "Tommy Andersson"
+    def authorEmail = "tommy.andersson@su.se"
     def description = '''\
-Brief summary/description of the plugin.
+This plugin inserts a filter that trims all strings on post.
 '''
 
     // URL to the plugin's documentation
     def documentation = "http://grails.org/plugin/grails-input-trimmer"
 
-    // Extra (optional) plugin metadata
+    // Any additional developers beyond the author specified above.
+    def developers = [
+        [ name: "Joakim Lundin", email: "joakim.lundin@su.se" ]
+    ]
+
+
+
+  // Extra (optional) plugin metadata
 
     // License: one of 'APACHE', 'GPL2', 'GPL3'
 //    def license = "APACHE"
@@ -41,7 +53,7 @@ Brief summary/description of the plugin.
     }
 
     def doWithSpring = {
-        // TODO Implement runtime spring config (optional)
+        application.addArtefact(FiltersConfigArtefactHandler.TYPE, InputTrimmingFilter.class)
     }
 
     def doWithDynamicMethods = { ctx ->
