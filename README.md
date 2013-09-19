@@ -1,0 +1,2 @@
+grails-input-trimmer
+====================
