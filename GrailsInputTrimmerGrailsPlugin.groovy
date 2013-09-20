@@ -1,9 +1,9 @@
 import org.codehaus.groovy.grails.plugins.web.filters.FiltersConfigArtefactHandler
-import se.su.it.grails.plugins.trimmer.InputTrimmingFilter
+import se.su.it.grails.plugins.trimmer.InputTrimmingFilters
 
 class GrailsInputTrimmerGrailsPlugin {
     // the plugin version
-    def version = "0.1.1"
+    def version = "0.1.2"
     def groupId = "se.su.it.grails.plugins"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.0 > *"
@@ -54,7 +54,7 @@ This plugin inserts a filter that trims all strings on post.
     }
 
     def doWithSpring = {
-        application.addArtefact(FiltersConfigArtefactHandler.TYPE, InputTrimmingFilter.class)
+        application.addArtefact(FiltersConfigArtefactHandler.TYPE, InputTrimmingFilters.class)
     }
 
     def doWithDynamicMethods = { ctx ->

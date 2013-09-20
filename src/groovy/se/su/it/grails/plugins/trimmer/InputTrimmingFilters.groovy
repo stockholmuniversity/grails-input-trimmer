@@ -5,7 +5,7 @@ package se.su.it.grails.plugins.trimmer
  * Every last line ripped from Programming Grails!
  */
 
-class InputTrimmingFilter {
+class InputTrimmingFilters {
   def filters = {
     blankToNullAndTrim(controller: '*', action: '*') {
       before = {
