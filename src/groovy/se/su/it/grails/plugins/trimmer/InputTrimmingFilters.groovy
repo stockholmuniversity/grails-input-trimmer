@@ -33,7 +33,8 @@ class InputTrimmingFilters {
           // update if trimmed
           map[name] = value
         }
-      } else if (value instanceof Map) {
+      }
+      else if (value instanceof Map) {
         convertBlanksToNullsAndTrim(value)
       }
     }
