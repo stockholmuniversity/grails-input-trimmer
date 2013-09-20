@@ -44,7 +44,7 @@ grails.project.dependency.resolution = {
     plugins {
       test(
           ":spock:0.7",
-          ':code-coverage:1.2.5') {
+          ':code-coverage:1.2.6') {
           exclude "spock-grails-support"
           export = false
         }
