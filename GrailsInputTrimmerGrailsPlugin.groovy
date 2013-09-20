@@ -3,10 +3,10 @@ import se.su.it.grails.plugins.trimmer.InputTrimmingFilter
 
 class GrailsInputTrimmerGrailsPlugin {
     // the plugin version
-    def version = "0.1"
+    def version = "0.1.1"
     def groupId = "se.su.it.grails.plugins"
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "2.3 > *"
+    def grailsVersion = "2.0 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
         "grails-app/views/error.gsp"
