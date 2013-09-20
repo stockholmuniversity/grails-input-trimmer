@@ -9,7 +9,8 @@ class GrailsInputTrimmerGrailsPlugin {
     def grailsVersion = "2.0 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
-        "grails-app/views/error.gsp"
+        "grails-app/views/error.gsp",
+        "grails-app/controllers/se/su/it/grails/plugins/FilterController.groovy"
     ]
 
     def loadBefore = ['filters']

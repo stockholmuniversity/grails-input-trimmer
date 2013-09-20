@@ -58,7 +58,7 @@ target(createPom: "Create a POM for Sonar") {
             packaging('pom')
             name(metadata.'app.name')
             build {
-                sourceDirectory('src/groovy')
+                sourceDirectory('src/groovy,grails-app/controllers')
             }
             properties {
                 'sonar.language'('grvy')
